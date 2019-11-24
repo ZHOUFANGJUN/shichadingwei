@@ -1,0 +1,501 @@
+
+*** Running vivado
+    with args -log pl_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pl_top.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source pl_top.tcl -notrace
+Command: synth_design -top pl_top -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 24624 
+WARNING: [Synth 8-2611] redeclaration of ansi port ifft_tlast_cnt is not allowed [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/ifft1.v:49]
+WARNING: [Synth 8-2611] redeclaration of ansi port chinal1_begin is not allowed [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/imports/new/rom0.v:36]
+WARNING: [Synth 8-2611] redeclaration of ansi port chinal2_begin is not allowed [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/imports/new/rom0.v:37]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 368.215 ; gain = 113.363
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'pl_top' [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/pl_top.v:23]
+INFO: [Synth 8-638] synthesizing module 'rom0' [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/imports/new/rom0.v:23]
+INFO: [Synth 8-638] synthesizing module 'dist_mem_gen_0' [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/realtime/dist_mem_gen_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'dist_mem_gen_0' (1#1) [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/realtime/dist_mem_gen_0_stub.v:6]
+INFO: [Synth 8-4471] merging register 'chinal2_begin_reg' into 'chinal1_begin_reg' [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/imports/new/rom0.v:77]
+WARNING: [Synth 8-6014] Unused sequential element chinal2_begin_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/imports/new/rom0.v:77]
+WARNING: [Synth 8-5788] Register addr_cnt_reg in module rom0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/imports/new/rom0.v:133]
+INFO: [Synth 8-256] done synthesizing module 'rom0' (2#1) [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/imports/new/rom0.v:23]
+INFO: [Synth 8-638] synthesizing module 'fft_multiper_ifft' [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/fft_multiper_ifft.v:23]
+INFO: [Synth 8-638] synthesizing module 'chinal1_to_fft' [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/chinal1_to_fft.v:23]
+	Parameter FFTCONFIG_FWD_INV_FFT bound to: 1'b1 
+	Parameter FFTCONFIG_FWD_INV_IFFT bound to: 1'b0 
+INFO: [Synth 8-638] synthesizing module 'xfft_0' [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/realtime/xfft_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'xfft_0' (3#1) [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/realtime/xfft_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'fft1' of module 'xfft_0' requires 20 connections, but only 18 given [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/chinal1_to_fft.v:92]
+INFO: [Synth 8-256] done synthesizing module 'chinal1_to_fft' (4#1) [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/chinal1_to_fft.v:23]
+INFO: [Synth 8-638] synthesizing module 'chinal2_to_fft' [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/chinal2_to_fft.v:23]
+	Parameter FFTCONFIG_FWD_INV_FFT bound to: 1'b1 
+	Parameter FFTCONFIG_FWD_INV_IFFT bound to: 1'b0 
+WARNING: [Synth 8-350] instance 'fft2' of module 'xfft_0' requires 20 connections, but only 18 given [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/chinal2_to_fft.v:96]
+INFO: [Synth 8-256] done synthesizing module 'chinal2_to_fft' (5#1) [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/chinal2_to_fft.v:23]
+INFO: [Synth 8-638] synthesizing module 'cmpy_0' [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/realtime/cmpy_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_0' (6#1) [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/realtime/cmpy_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'cmpy_0_tb' of module 'cmpy_0' requires 14 connections, but only 13 given [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/fft_multiper_ifft.v:87]
+INFO: [Synth 8-638] synthesizing module 'ifft1' [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/ifft1.v:23]
+	Parameter FFTCONFIG_FWD_INV_FFT bound to: 1'b1 
+	Parameter FFTCONFIG_FWD_INV_IFFT bound to: 1'b0 
+INFO: [Synth 8-638] synthesizing module 'Ifft_1' [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/realtime/Ifft_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'Ifft_1' (7#1) [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/realtime/Ifft_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'ifft_1' of module 'Ifft_1' requires 20 connections, but only 18 given [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/ifft1.v:104]
+INFO: [Synth 8-256] done synthesizing module 'ifft1' (8#1) [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/ifft1.v:23]
+INFO: [Synth 8-256] done synthesizing module 'fft_multiper_ifft' (9#1) [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/fft_multiper_ifft.v:23]
+INFO: [Synth 8-256] done synthesizing module 'pl_top' (10#1) [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/pl_top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 401.141 ; gain = 146.289
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 401.141 ; gain = 146.289
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/dcp4/dist_mem_gen_0_in_context.xdc] for cell 'rom_0/rom_0'
+Finished Parsing XDC File [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/dcp4/dist_mem_gen_0_in_context.xdc] for cell 'rom_0/rom_0'
+Parsing XDC File [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/dcp4/dist_mem_gen_0_in_context.xdc] for cell 'rom_0/rom_1'
+Finished Parsing XDC File [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/dcp4/dist_mem_gen_0_in_context.xdc] for cell 'rom_0/rom_1'
+Parsing XDC File [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/dcp5/xfft_0_in_context.xdc] for cell 'multipler1/chinal1_tb1/fft1'
+Finished Parsing XDC File [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/dcp5/xfft_0_in_context.xdc] for cell 'multipler1/chinal1_tb1/fft1'
+Parsing XDC File [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/dcp5/xfft_0_in_context.xdc] for cell 'multipler1/chinal2_tb2/fft2'
+Finished Parsing XDC File [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/dcp5/xfft_0_in_context.xdc] for cell 'multipler1/chinal2_tb2/fft2'
+Parsing XDC File [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/dcp6/Ifft_1_in_context.xdc] for cell 'multipler1/ifft1_tb/ifft_1'
+Finished Parsing XDC File [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/dcp6/Ifft_1_in_context.xdc] for cell 'multipler1/ifft1_tb/ifft_1'
+Parsing XDC File [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/dcp7/cmpy_0_in_context.xdc] for cell 'multipler1/cmpy_0_tb'
+Finished Parsing XDC File [D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/.Xil/Vivado-25264-DESKTOP-CH10RHM/dcp7/cmpy_0_in_context.xdc] for cell 'multipler1/cmpy_0_tb'
+Parsing XDC File [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/constrs_1/new/pl.xdc]
+Finished Parsing XDC File [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/constrs_1/new/pl.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/constrs_1/new/pl.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pl_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/pl_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 779.363 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'multipler1/cmpy_0_tb' at clock pin 'aclk' is different from the actual clock period '30.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 780.871 ; gain = 526.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 780.871 ; gain = 526.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for multipler1/chinal1_tb1/fft1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for multipler1/chinal2_tb2/fft2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for multipler1/cmpy_0_tb. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for multipler1/ifft1_tb/ifft_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for rom_0/rom_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for rom_0/rom_1. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 780.871 ; gain = 526.020
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "china2_begin_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "china3_begin_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "china4_begin_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element addr0_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/imports/new/rom0.v:123]
+WARNING: [Synth 8-6014] Unused sequential element addr1_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/imports/new/rom0.v:61]
+INFO: [Synth 8-5546] ROM "s_axis_data_tlast" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_axis_config_tvalid" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element num_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/chinal1_to_fft.v:46]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/chinal1_to_fft.v:74]
+INFO: [Synth 8-5546] ROM "s_axis_data_tlast" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_axis_config_tvalid" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element num_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/chinal2_to_fft.v:47]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/chinal2_to_fft.v:77]
+INFO: [Synth 8-5546] ROM "s_axis_data_tlast" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_axis_config_tvalid" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element num_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/ifft1.v:51]
+WARNING: [Synth 8-6014] Unused sequential element ifft_tlast_cnt_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/ifft1.v:66]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/ifft1.v:85]
+INFO: [Synth 8-5546] ROM "s_axis_a_tlast" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_axis_b_tlast" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element multipler_cnt_talst_reg_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/fft_multiper_ifft.v:42]
+WARNING: [Synth 8-6014] Unused sequential element n_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/pl_top.v:130]
+WARNING: [Synth 8-6014] Unused sequential element n1_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/pl_top.v:150]
+WARNING: [Synth 8-6014] Unused sequential element n2_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/pl_top.v:171]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 780.871 ; gain = 526.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     46 Bit       Adders := 1     
+	   2 Input     45 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               80 Bit    Registers := 1     
+	               45 Bit    Registers := 6     
+	               32 Bit    Registers := 2     
+	               10 Bit    Registers := 9     
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input     45 Bit        Muxes := 3     
+	   2 Input     34 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pl_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     45 Bit       Adders := 1     
++---Registers : 
+	               45 Bit    Registers := 6     
+	               10 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     45 Bit        Muxes := 3     
+Module rom0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module chinal1_to_fft 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module chinal2_to_fft 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module ifft1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               80 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module fft_multiper_ifft 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     46 Bit       Adders := 1     
+	   2 Input     45 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     34 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element addr0_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/imports/new/rom0.v:123]
+WARNING: [Synth 8-6014] Unused sequential element addr1_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/imports/new/rom0.v:61]
+INFO: [Synth 8-5546] ROM "chinal1_tb1/s_axis_config_tvalid" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "chinal1_tb1/s_axis_data_tlast" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "chinal2_tb2/s_axis_config_tvalid" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "chinal2_tb2/s_axis_data_tlast" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifft1_tb/s_axis_config_tvalid" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifft1_tb/s_axis_data_tlast" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_axis_a_tlast" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_axis_b_tlast" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element chinal1_tb1/cnt_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/chinal1_to_fft.v:74]
+WARNING: [Synth 8-6014] Unused sequential element chinal1_tb1/num_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/chinal1_to_fft.v:46]
+WARNING: [Synth 8-6014] Unused sequential element chinal2_tb2/cnt_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/chinal2_to_fft.v:77]
+WARNING: [Synth 8-6014] Unused sequential element chinal2_tb2/num_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/chinal2_to_fft.v:47]
+WARNING: [Synth 8-6014] Unused sequential element ifft1_tb/ifft_tlast_cnt_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/ifft1.v:66]
+WARNING: [Synth 8-6014] Unused sequential element ifft1_tb/cnt_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/ifft1.v:85]
+WARNING: [Synth 8-6014] Unused sequential element ifft1_tb/num_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/ifft1.v:51]
+WARNING: [Synth 8-6014] Unused sequential element multipler_cnt_talst_reg_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/fft_multiper_ifft.v:42]
+WARNING: [Synth 8-6014] Unused sequential element n_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/pl_top.v:130]
+WARNING: [Synth 8-6014] Unused sequential element n1_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/pl_top.v:150]
+WARNING: [Synth 8-6014] Unused sequential element n2_reg was removed.  [D:/FPGA/vivadoproject/PL_part/PL_part.srcs/sources_1/new/pl_top.v:171]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\rom_0/chinal1_begin_reg )
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[16]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[17]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[18]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[19]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[20]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[21]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[22]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[23]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[24]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[25]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[26]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[27]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[28]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[29]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[30]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal2_tb2/s_axis_data_tdata_reg[31]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[16]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[17]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[18]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[19]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[20]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[21]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[22]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[23]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[24]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[25]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[26]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[27]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[28]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[29]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[30]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/chinal1_tb1/s_axis_data_tdata_reg[31]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/ifft1_tb/s_axis_data_tdata_reg[34]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/ifft1_tb/s_axis_data_tdata_reg[35]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/ifft1_tb/s_axis_data_tdata_reg[36]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/ifft1_tb/s_axis_data_tdata_reg[37]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/ifft1_tb/s_axis_data_tdata_reg[38]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/ifft1_tb/s_axis_data_tdata_reg[39]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/ifft1_tb/s_axis_data_tdata_reg[74]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/ifft1_tb/s_axis_data_tdata_reg[75]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/ifft1_tb/s_axis_data_tdata_reg[76]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/ifft1_tb/s_axis_data_tdata_reg[77]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3886] merging instance 'multipler1/ifft1_tb/s_axis_data_tdata_reg[78]' (FDC) to 'multipler1/ifft1_tb/s_axis_data_tdata_reg[79]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\multipler1/ifft1_tb/s_axis_data_tdata_reg[79] )
+WARNING: [Synth 8-3332] Sequential element (rom_0/chinal1_begin_reg) is unused and will be removed from module pl_top.
+WARNING: [Synth 8-3332] Sequential element (multipler1/multipler_cnt_talst_reg_reg[7]) is unused and will be removed from module pl_top.
+WARNING: [Synth 8-3332] Sequential element (multipler1/multipler_cnt_talst_reg_reg[6]) is unused and will be removed from module pl_top.
+WARNING: [Synth 8-3332] Sequential element (multipler1/multipler_cnt_talst_reg_reg[5]) is unused and will be removed from module pl_top.
+WARNING: [Synth 8-3332] Sequential element (multipler1/multipler_cnt_talst_reg_reg[4]) is unused and will be removed from module pl_top.
+WARNING: [Synth 8-3332] Sequential element (multipler1/multipler_cnt_talst_reg_reg[3]) is unused and will be removed from module pl_top.
+WARNING: [Synth 8-3332] Sequential element (multipler1/multipler_cnt_talst_reg_reg[2]) is unused and will be removed from module pl_top.
+WARNING: [Synth 8-3332] Sequential element (multipler1/multipler_cnt_talst_reg_reg[1]) is unused and will be removed from module pl_top.
+WARNING: [Synth 8-3332] Sequential element (multipler1/multipler_cnt_talst_reg_reg[0]) is unused and will be removed from module pl_top.
+WARNING: [Synth 8-3332] Sequential element (multipler1/ifft1_tb/s_axis_data_tdata_reg[79]) is unused and will be removed from module pl_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 780.871 ; gain = 526.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 786.578 ; gain = 531.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 836.262 ; gain = 581.410
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 836.871 ; gain = 582.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 836.871 ; gain = 582.020
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 836.871 ; gain = 582.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 836.871 ; gain = 582.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 836.871 ; gain = 582.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 836.871 ; gain = 582.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 836.871 ; gain = 582.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |cmpy_0         |         1|
+|2     |xfft_0         |         2|
+|3     |Ifft_1         |         1|
+|4     |dist_mem_gen_0 |         2|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+------------------+------+
+|      |Cell              |Count |
++------+------------------+------+
+|1     |Ifft_1            |     1|
+|2     |cmpy_0            |     1|
+|3     |dist_mem_gen_0    |     1|
+|4     |dist_mem_gen_0__1 |     1|
+|5     |xfft_0            |     1|
+|6     |xfft_0__1         |     1|
+|7     |BUFG              |     1|
+|8     |CARRY4            |   154|
+|9     |LUT1              |   137|
+|10    |LUT2              |    93|
+|11    |LUT3              |    30|
+|12    |LUT4              |   192|
+|13    |LUT5              |    23|
+|14    |LUT6              |   241|
+|15    |FDCE              |   258|
+|16    |FDRE              |   440|
+|17    |IBUF              |    32|
+|18    |OBUF              |    30|
++------+------------------+------+
+
+Report Instance Areas: 
++------+----------------+------------------+------+
+|      |Instance        |Module            |Cells |
++------+----------------+------------------+------+
+|1     |top             |                  |  2111|
+|2     |  multipler1    |fft_multiper_ifft |  1190|
+|3     |    chinal1_tb1 |chinal1_to_fft    |   210|
+|4     |    chinal2_tb2 |chinal2_to_fft    |   176|
+|5     |    ifft1_tb    |ifft1             |   587|
+|6     |  rom_0         |rom0              |   162|
++------+----------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 836.871 ; gain = 582.020
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 36 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 836.871 ; gain = 202.289
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 836.871 ; gain = 582.020
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 186 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+97 Infos, 46 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 836.871 ; gain = 593.488
+INFO: [Common 17-1381] The checkpoint 'D:/FPGA/vivadoproject/PL_part/PL_part.runs/synth_1/pl_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file pl_top_utilization_synth.rpt -pb pl_top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 836.871 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 21 22:09:23 2019...

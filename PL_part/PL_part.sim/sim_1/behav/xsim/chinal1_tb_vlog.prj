@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../PL_part.srcs/sources_1/ip/dist_mem_gen_0/sim/dist_mem_gen_0.v" \
+"../../../../PL_part.srcs/sources_1/new/chinal1_to_fft.v" \
+"../../../../PL_part.srcs/sources_1/new/chinal2_to_fft.v" \
+"../../../../PL_part.srcs/sources_1/new/fft_multiper_ifft.v" \
+"../../../../PL_part.srcs/sources_1/new/ifft1.v" \
+"../../../../PL_part.srcs/sources_1/new/pl_top.v" \
+"../../../../PL_part.srcs/sources_1/imports/new/rom0.v" \
+"../../../../PL_part.srcs/sim_1/imports/new/chinal1_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Nov 19 23:30:16 2019
+# Process ID: 22308
+# Current directory: D:/FPGA/vivadoproject/PL_part/PL_part.runs/dist_mem_gen_0_synth_1
+# Command line: vivado.exe -log dist_mem_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dist_mem_gen_0.tcl
+# Log file: D:/FPGA/vivadoproject/PL_part/PL_part.runs/dist_mem_gen_0_synth_1/dist_mem_gen_0.vds
+# Journal file: D:/FPGA/vivadoproject/PL_part/PL_part.runs/dist_mem_gen_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source dist_mem_gen_0.tcl -notrace

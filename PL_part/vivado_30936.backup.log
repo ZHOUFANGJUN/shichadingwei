@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Nov 22 08:37:39 2019
+# Process ID: 30936
+# Current directory: D:/FPGA/vivadoproject/PL_part2/PL_part
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28580 D:\FPGA\vivadoproject\PL_part2\PL_part\PL_part.xpr
+# Log file: D:/FPGA/vivadoproject/PL_part2/PL_part/vivado.log
+# Journal file: D:/FPGA/vivadoproject/PL_part2/PL_part\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.xpr
+INFO: [Project 1-313] Project file moved from 'D:/FPGA/vivadoproject/PL_part' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/FPGA/vivado1/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:11 . Memory (MB): peak = 762.418 ; gain = 65.164
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 2
+[Fri Nov 22 08:38:38 2019] Launched impl_1...
+Run output will be captured here: D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 22 08:49:11 2019...

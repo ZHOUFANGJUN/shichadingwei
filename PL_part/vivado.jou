@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Nov 24 01:23:18 2019
+# Process ID: 51604
+# Current directory: D:/FPGA/vivadoproject/PL_part2/PL_part
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent52056 D:\FPGA\vivadoproject\PL_part2\PL_part\PL_part.xpr
+# Log file: D:/FPGA/vivadoproject/PL_part2/PL_part/vivado.log
+# Journal file: D:/FPGA/vivadoproject/PL_part2/PL_part\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source chinal1_tb.tcl
+run all
+run all
+add_wave {{/chinal1_tb/pl0/multipler1/clk}} {{/chinal1_tb/pl0/multipler1/rst_n}} {{/chinal1_tb/pl0/multipler1/chinal1_input_real}} {{/chinal1_tb/pl0/multipler1/chinal2_input_real}} {{/chinal1_tb/pl0/multipler1/chinal1_en}} {{/chinal1_tb/pl0/multipler1/chinal2_en}} {{/chinal1_tb/pl0/multipler1/ifft1_output_img}} {{/chinal1_tb/pl0/multipler1/ifft1_output_real}} {{/chinal1_tb/pl0/multipler1/ifft_tlast_cnt}} {{/chinal1_tb/pl0/multipler1/ifft1_output_tuser}} {{/chinal1_tb/pl0/multipler1/multipler_cnt_talst}} {{/chinal1_tb/pl0/multipler1/ifft1__input_real}} {{/chinal1_tb/pl0/multipler1/ifft1__input_imag}} {{/chinal1_tb/pl0/multipler1/ifft1_output_tvalid}} {{/chinal1_tb/pl0/multipler1/ifft_data_tlast}} {{/chinal1_tb/pl0/multipler1/multipler_cnt_talst_reg}} {{/chinal1_tb/pl0/multipler1/chinal1_output_img}} {{/chinal1_tb/pl0/multipler1/chinal1_output_real}} {{/chinal1_tb/pl0/multipler1/chinal1_output_tuser}} {{/chinal1_tb/pl0/multipler1/chinal2_output_img}} {{/chinal1_tb/pl0/multipler1/chinal2_output_real}} {{/chinal1_tb/pl0/multipler1/chinal2_output_tuser}} {{/chinal1_tb/pl0/multipler1/s_axis_a_tvalid}} {{/chinal1_tb/pl0/multipler1/s_axis_b_tvalid}} {{/chinal1_tb/pl0/multipler1/m_axis_dout_tvalid}} {{/chinal1_tb/pl0/multipler1/s_axis_a_tuser}} {{/chinal1_tb/pl0/multipler1/s_axis_a_tlast}} {{/chinal1_tb/pl0/multipler1/s_axis_b_tuser}} {{/chinal1_tb/pl0/multipler1/s_axis_b_tlast}} {{/chinal1_tb/pl0/multipler1/m_axis_dout_tdata}} {{/chinal1_tb/pl0/multipler1/m_axis_dout_tlast}} {{/chinal1_tb/pl0/multipler1/ifft1_en}} {{/chinal1_tb/pl0/multipler1/real_dout_tdata}} {{/chinal1_tb/pl0/multipler1/imag_dout_tdata}} {{/chinal1_tb/pl0/multipler1/ifft_carry_bit}} {{/chinal1_tb/pl0/multipler1/ifft_carry_bit1}} {{/chinal1_tb/pl0/multipler1/ifft_round}} {{/chinal1_tb/pl0/multipler1/ifft_imag_round}} 
+run all

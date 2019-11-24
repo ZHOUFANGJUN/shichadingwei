@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Nov 22 08:37:39 2019
+# Process ID: 30936
+# Current directory: D:/FPGA/vivadoproject/PL_part2/PL_part
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28580 D:\FPGA\vivadoproject\PL_part2\PL_part\PL_part.xpr
+# Log file: D:/FPGA/vivadoproject/PL_part2/PL_part/vivado.log
+# Journal file: D:/FPGA/vivadoproject/PL_part2/PL_part\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run impl_1 -prev_step 

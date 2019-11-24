@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:D:/FPGA/vivadoproject/PL_part/PL_part.srcs/constrs_1/new/pl.xdc rfile:../../../PL_part.srcs/constrs_1/new/pl.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:63 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U18 [get_ports clk]
+set_property src_info {type:XDC file:1 line:64 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN N15 [get_ports rst_n]

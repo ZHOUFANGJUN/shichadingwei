@@ -1,0 +1,16 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sim_1/imports/new/chinal1_tb.v,1574339053,verilog,,,,chinal1_tb,,,,,,,,
+D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/imports/new/rom0.v,1574330113,verilog,,D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sim_1/imports/new/chinal1_tb.v,,rom0,,,,,,,,
+D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/ip/Ifft_1/sim/Ifft_1.vhd,1574232930,vhdl,,,,ifft_1,,,,,,,,
+D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/ip/cmpy_0/sim/cmpy_0.vhd,1574181534,vhdl,,,,cmpy_0,,,,,,,,
+D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/ip/dist_mem_gen_0/sim/dist_mem_gen_0.v,1574177411,verilog,,D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/new/chinal1_to_fft.v,,dist_mem_gen_0,,,,,,,,
+D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/ip/xfft_0/sim/xfft_0.vhd,1574338825,vhdl,,,,xfft_0,,,,,,,,
+D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/new/chinal1_to_fft.v,1574334730,verilog,,D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/new/chinal2_to_fft.v,,chinal1_to_fft,,,,,,,,
+D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/new/chinal2_to_fft.v,1574334862,verilog,,D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/new/fft_multiper_ifft.v,,chinal2_to_fft,,,,,,,,
+D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/new/fft_multiper_ifft.v,1574342733,verilog,,D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/new/ifft1.v,,fft_multiper_ifft,,,,,,,,
+D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/new/ifft1.v,1574337811,verilog,,D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/new/pl_top.v,,ifft1,,,,,,,,
+D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/new/pl_top.v,1574345282,verilog,,D:/FPGA/vivadoproject/PL_part2/PL_part/PL_part.srcs/sources_1/imports/new/rom0.v,,pl_top,,,,,,,,

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Nov 20 00:39:01 2019
+# Process ID: 23940
+# Current directory: D:/FPGA/vivadoproject/PL_part/PL_part.runs/cmpy_0_synth_1
+# Command line: vivado.exe -log cmpy_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cmpy_0.tcl
+# Log file: D:/FPGA/vivadoproject/PL_part/PL_part.runs/cmpy_0_synth_1/cmpy_0.vds
+# Journal file: D:/FPGA/vivadoproject/PL_part/PL_part.runs/cmpy_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source cmpy_0.tcl -notrace

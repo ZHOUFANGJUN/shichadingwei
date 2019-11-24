@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../PL_part.srcs/sources_1/ip/Ifft_1/sim/Ifft_1.vhd" \
+
+nosort

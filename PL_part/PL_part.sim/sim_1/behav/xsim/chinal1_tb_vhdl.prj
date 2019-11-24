@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../PL_part.srcs/sources_1/ip/Ifft_1/sim/Ifft_1.vhd" \
+"../../../../PL_part.srcs/sources_1/ip/cmpy_0/sim/cmpy_0.vhd" \
+"../../../../PL_part.srcs/sources_1/ip/xfft_0/sim/xfft_0.vhd" \
+
+# Do not sort compile order
+nosort

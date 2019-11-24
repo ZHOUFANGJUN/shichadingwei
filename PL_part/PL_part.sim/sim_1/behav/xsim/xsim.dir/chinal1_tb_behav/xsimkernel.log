@@ -1,0 +1,4 @@
+Running: xsim.dir/chinal1_tb_behav/xsimk.exe -simmode gui -wdb chinal1_tb_behav.wdb -simrunnum 0 -socket 21976
+Design successfully loaded
+Design Loading Memory Usage: 110848 KB (Peak: 110848 KB)
+Design Loading CPU Usage: 453 ms
